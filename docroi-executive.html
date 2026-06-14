@@ -357,6 +357,11 @@
       isolation: isolate;
     }
 
+    .visual-panel.is-form-open {
+      overflow: visible;
+      background: rgba(255,255,255,0.08);
+    }
+
     .visual-panel::after {
       content: "";
       position: absolute;
@@ -431,10 +436,11 @@
     }
 
     .form-card {
-      position: absolute;
-      inset: 18px;
+      position: relative;
+      display: none;
       z-index: 4;
-      overflow: auto;
+      overflow: visible;
+      margin: 18px;
       padding: clamp(18px, 2.4vw, 28px);
       border-radius: var(--radius);
       background: linear-gradient(180deg, var(--white), var(--paper));
@@ -447,6 +453,7 @@
     }
 
     .visual-panel.is-form-open .form-card {
+      display: block;
       opacity: 1;
       transform: translateY(0);
       pointer-events: auto;
@@ -457,6 +464,17 @@
       opacity: 0;
       transform: scale(1.03);
       transition: opacity 220ms ease, transform 220ms ease;
+    }
+
+    .visual-panel.is-form-open::after {
+      opacity: 0;
+    }
+
+    .visual-panel.is-form-open img,
+    .visual-panel.is-form-open .visual-caption {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
     }
 
     .form-card h3 {
@@ -921,7 +939,7 @@
       }
 
       .form-card {
-        inset: 10px;
+        margin: 10px;
       }
     }
 
