@@ -256,7 +256,7 @@
     }
 
     .decision-button {
-      min-height: 154px;
+      min-height: 136px;
       padding: 22px;
       display: flex;
       flex-direction: column;
@@ -628,7 +628,7 @@
 
     .service-clarity {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
       margin-bottom: clamp(28px, 5vw, 54px);
     }
@@ -860,11 +860,11 @@
         width: 100%;
         max-width: none;
         justify-self: stretch;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
       .decision-button {
-        min-height: 132px;
+        min-height: 128px;
       }
 
       .visual-panel,
@@ -883,7 +883,7 @@
       }
 
       .decision-panel {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
       .visual-panel,
@@ -975,7 +975,7 @@
       <div>
         <p class="section-kicker">DocROI Executive</p>
         <h1 id="hero-title">Alinear talento y cultura digital con objetivos reales.</h1>
-        <p class="lead">DocROI Executive conecta necesidades formativas con profesionales, trainers y experiencias diseñadas para activar IA, dato, ROI, productividad y cultura digital desde un lenguaje ejecutivo y aplicable.</p>
+        <p class="lead">DocROI Executive conecta necesidades formativas con profesionales, trainers, formación in-company y espacios Train the Trainers diseñados para activar IA, dato, ROI, productividad y cultura digital desde un lenguaje ejecutivo y aplicable.</p>
         <p class="support">Cuando una institución necesita buenos formadores o una empresa necesita preparar a sus equipos para nuevos retos digitales, el valor está en encontrar criterio, experiencia y capacidad de aterrizar el cambio.</p>
       </div>
 
@@ -987,6 +987,10 @@
         <button class="decision-button" type="button" data-target="team-frame">
           <span class="decision-title">Para nuestro equipo</span>
           <span class="decision-meta">Formación in-company aplicada <span class="arrow" aria-hidden="true">↓</span></span>
+        </button>
+        <button class="decision-button" type="button" data-target="trainer-training-frame">
+          <span class="decision-title">Train the Trainers</span>
+          <span class="decision-meta">Formador de formadores <span class="arrow" aria-hidden="true">↓</span></span>
         </button>
       </nav>
     </section>
@@ -1108,10 +1112,64 @@
       </div>
     </section>
 
+    <section id="trainer-training-frame" class="frame frame-grid" aria-labelledby="trainer-training-title">
+      <div class="content-panel">
+        <p class="section-kicker">Para docentes, trainers y perfiles C-level que forman a otros</p>
+        <h2 id="trainer-training-title">Convierte conocimiento experto en una experiencia formativa que llega al alumno.</h2>
+        <div class="copy-stack">
+          <p>Hay profesionales que dominan un tema, pero necesitan ayuda para aterrizarlo en clase, ordenar la narrativa, preparar materiales, diseñar dinámicas o traducir conceptos complejos a un lenguaje que el alumno pueda practicar.</p>
+          <p>Doc ROI acompaña a formadores, trainers, directivos y expertos que quieren mejorar cómo enseñan IA, dato, ROI, Customer Equity, automatización, marketing, CRM o transformación digital desde un enfoque claro, aplicable y ejecutivo.</p>
+          <p>Trabajamos en sesiones muy personalizadas, casi como un laboratorio privado de docencia aplicada. Por eso cada sesión admite un máximo de tres personas.</p>
+        </div>
+        <ul class="value-list" aria-label="Valor para formador de formadores">
+          <li>Diseño de clases y workshops</li>
+          <li>Materiales de apoyo</li>
+          <li>Dinámicas participativas</li>
+          <li>Casos y ejemplos aplicados</li>
+          <li>Narrativa C-level</li>
+          <li>Máximo tres personas por sesión</li>
+        </ul>
+        <p class="emotional-copy">Si alguna vez has tenido que explicar un concepto difícil, sostener la atención de un grupo o convertir una idea potente en una clase memorable, este espacio está pensado para ti.</p>
+        <button class="primary-button" type="button" data-open-form="trainerTraining">Solicitar contacto</button>
+      </div>
+
+      <div id="trainer-training-visual-panel" class="visual-panel" aria-live="polite">
+        <img src="https://docroi.marketing/wp-content/uploads/2026/06/train_trainers.png" alt="Sesión Train the Trainers para formadores y perfiles executive.">
+        <div class="visual-caption">
+          <strong>Formador de formadores</strong>
+          <span>Del conocimiento experto a materiales, dinámicas y sesiones aplicables.</span>
+        </div>
+        <article id="trainer-training-form" class="form-card" aria-labelledby="trainer-training-form-title">
+          <h3 id="trainer-training-form-title">Cuéntanos qué necesitas aterrizar</h3>
+          <p class="form-intro">Solicita una primera conversación para entender el tema, el público y el tipo de apoyo que necesitas. Las sesiones son personalizadas y admiten como máximo tres personas.</p>
+          <form data-form-kind="trainerTraining">
+            <div class="form-grid">
+              <div class="field"><label for="tt-name">Nombre y apellidos</label><input id="tt-name" name="trainer_training_full_name" autocomplete="name" required></div>
+              <div class="field"><label for="tt-role">Cargo o perfil</label><input id="tt-role" name="trainer_training_role" autocomplete="organization-title"></div>
+              <div class="field"><label for="tt-organization">Empresa, escuela o institución</label><input id="tt-organization" name="organization" autocomplete="organization"></div>
+              <div class="field"><label for="tt-people">Personas en la sesión</label><select id="tt-people" name="people_count"><option>1 persona</option><option>2 personas</option><option>3 personas</option></select></div>
+              <div class="field full"><label for="tt-topic">Concepto, tema o clase que necesitas aterrizar</label><input id="tt-topic" name="topic_to_land" required></div>
+              <div class="field full"><label for="tt-support">Tipo de apoyo que buscas</label><select id="tt-support" name="support_type"><option>Diseñar una clase o workshop</option><option>Preparar materiales de apoyo</option><option>Crear dinámicas para llegar al alumno</option><option>Aterrizar un caso o concepto complejo</option><option>Mejorar narrativa y estructura executive</option><option>Todavía por definir</option></select></div>
+              <div class="field"><label for="tt-audience">Público o alumno objetivo</label><input id="tt-audience" name="target_audience"></div>
+              <div class="field"><label for="tt-modality">Modalidad preferida</label><select id="tt-modality" name="preferred_modality"><option>Online</option><option>Presencial</option><option>Híbrida</option><option>Por definir</option></select></div>
+              <div class="field"><label for="tt-language">Idioma</label><select id="tt-language" name="language"><option>Español</option><option>Inglés</option><option>Español/Inglés</option></select></div>
+              <div class="field"><label for="tt-calendar">Calendario deseado</label><input id="tt-calendar" name="desired_calendar"></div>
+              <div class="field"><label for="tt-email">Email</label><input id="tt-email" name="email" type="email" autocomplete="email" required></div>
+              <div class="field"><label for="tt-phone">Teléfono</label><input id="tt-phone" name="phone" type="tel" autocomplete="tel"></div>
+            </div>
+            <label class="check-field urgent-note"><input type="checkbox" name="priority_contact"> Es urgente, necesito contacto prioritario.</label>
+            <label class="check-field"><input type="checkbox" name="legal_notice_acceptance" required> He revisado el <a href="https://docroi.marketing/aviso-legal/" target="_blank" rel="noopener">aviso legal y política de privacidad</a> y acepto que Doc ROI utilice estos datos únicamente para responder a esta solicitud informativa o de diagnóstico formativo.</label>
+            <button class="submit-button" type="submit">Solicitar conversación Train the Trainers</button>
+          </form>
+          <div class="success-message" data-success="trainerTraining">Gracias. Hemos recibido tu solicitud. Te contactaremos en menos de 24 horas para entender el tema, el público y el tipo de apoyo que necesitas para aterrizar la experiencia formativa.<br><br>Si has marcado la opción urgente, priorizaremos la llamada.</div>
+        </article>
+      </div>
+    </section>
+
     <aside class="botiquin-card" aria-labelledby="botiquin-title">
       <div>
         <h2 id="botiquin-title">DocROI Executive</h2>
-        <p>Formadores, trainers y formación in-company para activar IA, dato, ROI y cultura digital en programas executive, escuelas de negocio y empresas.</p>
+        <p>Formadores, trainers, Train the Trainers y formación in-company para activar IA, dato, ROI y cultura digital en programas executive, escuelas de negocio y empresas.</p>
       </div>
       <a href="/docroi-executive/">Entrar en DocROI Executive</a>
     </aside>
@@ -1126,6 +1184,11 @@
         <p class="section-kicker">Formación in-company</p>
         <h2>Primero diagnóstico, después propuesta.</h2>
         <p>La petición in-company es una solicitud de información y diagnóstico previo. Antes de diseñar un modelo formativo hace falta entender equipo, objetivos, urgencia, cultura y pains concretos que quizá puedan resolverse ya desde una primera conversación.</p>
+      </article>
+      <article class="clarity-card">
+        <p class="section-kicker">Train the Trainers</p>
+        <h2>Sesiones privadas para mejorar cómo enseñas.</h2>
+        <p>El servicio de formador de formadores ayuda a aterrizar conceptos, preparar materiales y diseñar dinámicas. Son sesiones muy personalizadas, con un máximo de tres personas para cuidar el contexto y el nivel de detalle.</p>
       </article>
     </section>
 
@@ -1213,7 +1276,8 @@
 
     const panels = {
       trainers: document.getElementById("trainers-visual-panel"),
-      team: document.getElementById("team-visual-panel")
+      team: document.getElementById("team-visual-panel"),
+      trainerTraining: document.getElementById("trainer-training-visual-panel")
     };
 
     const openForm = (kind, format) => {
