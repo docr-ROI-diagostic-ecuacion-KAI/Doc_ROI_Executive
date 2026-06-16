@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 
 const file = "index.html";
-const analyticsBaseUrl = process.env.DOCROI_ANALYTICS_BASE_URL || "https://bsc-doc-roi-61qn.vercel.app";
+const analyticsBaseUrl = process.env.DOCROI_ANALYTICS_BASE_URL || "https://bsc-doc-roi.vercel.app";
 const html = readFileSync(file, "utf8");
 
 const start = "<!-- DOCROI_ANALYTICS_START -->";
